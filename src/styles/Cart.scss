@@ -1,0 +1,31 @@
+@use 'common';
+@use "theme";
+
+.cart-container {
+  border: 1px solid theme.$neutrals-three;
+  border-radius: common.$border-radius;
+  box-shadow: 0px 8px 100px 0px #0000000d;
+  margin-top: common.$margin-top;
+  overflow: hidden;
+
+  .select-loader-container {
+    background: theme.$neutrals-two;
+    padding: 10px common.$padding-side;
+    border-bottom: 1px solid theme.$neutrals-three;
+  }
+
+  .subtotal {
+    background: theme.$neutrals-two;
+    padding: 10px common.$padding-side;
+    border-top: 1px solid theme.$neutrals-three;
+  }
+}
+
+.cart-checkout {
+  background: theme.$neutrals-two;
+  border: 1px solid theme.$neutrals-three;
+  border-radius: common.$border-radius;
+  box-shadow: 0px 8px 100px 0px #0000000d;
+  padding: 10px common.$padding-side;
+  margin-top: common.$margin-top;
+}
