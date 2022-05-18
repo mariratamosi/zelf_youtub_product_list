@@ -1,0 +1,28 @@
+@use 'common';
+@use "theme";
+
+.yz-navbar {
+  @include common.flex-space-between;
+  height: 70px;
+
+  .nav-info {
+    @include common.flex-space-between;
+
+    .zelf-logo {
+      margin-left: 20px;
+    }
+
+    .cart {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: attr(data-count);
+        @include common.yz-circle(13px, theme.$custom-red);
+        font-size: 10px;
+        @include common.flex-center;
+        bottom: 3px;
+        right: 0;
+      }
+    }
+  }
+}

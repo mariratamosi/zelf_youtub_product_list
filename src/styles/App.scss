@@ -1,0 +1,8 @@
+@use "theme";
+
+.App {
+  background: theme.$neutrals-one;
+  min-height: 100vh;
+  color: white;
+  padding: 0 20px;
+}

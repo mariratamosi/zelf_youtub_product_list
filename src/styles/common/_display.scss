@@ -1,0 +1,18 @@
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin yz-circle($dia, $bg) {
+  width: $dia;
+  height: $dia;
+  border-radius: 50%;
+  background-color: $bg;
+}
