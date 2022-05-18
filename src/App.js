@@ -9,6 +9,7 @@ function App() {
   const [profileInfo, setProfileInfo] = useState(null)
   const [items, setItems] = useState(null)
   const [subtotal, setSubTotal] = useState(0)
+  const [title, setTitle] = useState("")
 
   useEffect(() => {
     console.log("product start")
@@ -18,6 +19,7 @@ function App() {
         setProfileInfo(pageData.creator_statics)
         setItems(pageData.items)
         setSubTotal(pageData.subtotal_price_in_cents)
+        setTitle(pageData.cart_title)
       })
       .catch((err) => {
         console.log(err)
@@ -28,7 +30,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Profile profileInfo={profileInfo} />
-      <Cart items={items} subtotal={subtotal} />
+      <Cart items={items} subtotal={subtotal} title={title} />
     </div>
   )
 }

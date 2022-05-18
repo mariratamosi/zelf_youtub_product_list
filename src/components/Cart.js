@@ -1,8 +1,9 @@
 import "../styles/Cart.scss"
+import Product from "./Product"
 
 import { useEffect } from "react"
 
-const Cart = ({ items, subtotal }) => {
+const Cart = ({ items, subtotal, title }) => {
   useEffect(() => {
     console.log(items)
 
@@ -22,10 +23,13 @@ const Cart = ({ items, subtotal }) => {
           <div className="select-text">Select Items</div>
           <div className="select-loader"></div>
         </div>
-        <div className="cart-items">
-          {Object.keys(items).map((key, idx) => (
-            <p key={idx}>{items[key].name}</p>
-          ))}
+        <div className="cart-and-title">
+          <div className="cart-title">{title}</div>
+          <div className="cart-items">
+            {Object.keys(items).map((key, idx) => (
+              <Product key={idx} item={items[key]}></Product>
+            ))}
+          </div>
         </div>
         <div className="subtotal">{subtotal}</div>
       </div>
