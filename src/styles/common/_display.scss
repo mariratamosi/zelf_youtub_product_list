@@ -10,6 +10,12 @@
   align-items: center;
 }
 
+@mixin flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 @mixin yz-circle($dia, $bg) {
   width: $dia;
   height: $dia;

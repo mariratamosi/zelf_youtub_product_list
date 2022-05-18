@@ -1,0 +1,70 @@
+@mixin typo_h1_active {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+@mixin typo_h1_highlight {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+@mixin typo_h2_active {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+@mixin typo_h2_highlight {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@mixin typo_h3_active {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+@mixin typo_h3_highlight {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+@mixin typo_h4_active {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+@mixin typo_h4_highlight {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+@mixin typo_body_active {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+//TODO check the line-height diff with typo_h4_highlight
+@mixin typo_h4_highlight {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+@mixin typo_caption1_active {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+@mixin typo_caption1_highlight {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+@mixin typo_caption2_active {
+  font-weight: 400;
+  font-size: 10px;
+}
+
+@mixin typo_caption1_highlight {
+  font-weight: 400;
+  font-size: 10px;
+}
