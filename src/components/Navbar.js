@@ -7,16 +7,26 @@ function Navbar() {
   const count = 5
   return (
     <div className="yz-navbar">
-      <div className="company-name-text">
+      <a
+        className="company-name-text"
+        href="https://hellozelf.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img src={zelf_text} alt="Zelf."></img>
-      </div>
+      </a>
       <div className="nav-info">
         <div className="cart" data-count={count}>
           <img src={cart} alt="Cart"></img>
         </div>
-        <div className="zelf-logo">
+        <a
+          className="zelf-logo"
+          href="https://hellozelf.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={zelf_logo} alt="Zelf."></img>
-        </div>
+        </a>
       </div>
     </div>
   )
