@@ -8,6 +8,7 @@ function App() {
   const [items, setItems] = useState(null)
 
   useEffect(() => {
+    console.log("product start")
     fetchBuildingProducListData("data.json")
       .then((pageData) => {
         console.log(pageData)
@@ -17,7 +18,7 @@ function App() {
       .catch((err) => {
         console.log(err)
       })
-  })
+  }, [])
 
   return (
     <div className="App">
