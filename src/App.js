@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import "./styles/App.scss"
 import Navbar from "./components/Navbar"
 import { fetchBuildingProducListData } from "./service/networkService"
+import Profile from "./components/Profile"
 
 function App() {
   const [profileInfo, setProfileInfo] = useState(null)
@@ -23,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <div>Profile info</div>
+      <Profile profileInfo={profileInfo} />
       <div>Cart details</div>
     </div>
   )

@@ -3,8 +3,8 @@
   "cart_title": "Ultimate Creator Setup",
   "creator_statics": {
     "creator_name": "Ahmed Baky",
-    "creator_icon_url": "https://hellozelf.nyc3.cdn.digitaloceanspaces.com/Creators/ahmed_icon.jpeg",
-    "creator_banner_url": "https://hellozelf.nyc3.cdn.digitaloceanspaces.com/Creators/ahmed_banner.png",
+    "creator_icon_url": "https://hellozelf-dev.nyc3.cdn.digitaloceanspaces.com/scratch/ahmed_icon.jpeg",
+    "creator_banner_url": "https://hellozelf-dev.nyc3.cdn.digitaloceanspaces.com/scratch/ahmed_banner.jpeg",
     "creator_subscriber_count": 3450
   },
   "items": {

@@ -1,0 +1,40 @@
+@use 'common';
+@use "theme";
+
+.creator-profile {
+  background: theme.$neutrals-two;
+  border: 1px solid theme.$neutrals-three;
+  border-radius: 5px;
+
+  .creator-banner {
+    width: 100%;
+    height: 140px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .creator-name-icon {
+    @include common.flex-start;
+    padding: 10px 15px;
+
+    .creator-icon {
+      img {
+        @include common.yz-circle(45px, "white");
+      }
+    }
+
+    .creator-name-subs {
+      margin-left: 15px;
+    }
+
+    .creator-name {
+      @include common.typo_h3_active;
+      margin-bottom: 5px;
+    }
+
+    .creator-subs-count {
+      @include common.typo_caption1_active;
+      color: theme.$neutrals-four;
+    }
+  }
+}
