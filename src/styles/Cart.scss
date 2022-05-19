@@ -23,6 +23,18 @@
   .cart-and-title {
     padding: 10px common.$padding-side;
   }
+
+  .cart-title-collapsible {
+    @include common.flex-start;
+
+    .yz-icon img {
+      @include common.yz-icon-img;
+    }
+
+    .title {
+      @include common.typo_h3_active;
+    }
+  }
 }
 
 .cart-checkout {

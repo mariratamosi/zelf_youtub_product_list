@@ -26,3 +26,10 @@ $margin-top: 15px;
   border-radius: 50%;
   background-color: $bg;
 }
+
+@mixin yz-icon-img {
+  width: 35px;
+}
+
+@mixin yz-btn {
+}
