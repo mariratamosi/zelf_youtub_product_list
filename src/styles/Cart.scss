@@ -14,10 +14,14 @@
     border-bottom: 1px solid theme.$neutrals-three;
   }
 
-  .subtotal {
-    background: theme.$neutrals-two;
+  .subtotal-container {
+    @include common.flex-space-between;
     padding: 10px common.$padding-side;
+    background: theme.$neutrals-two;
     border-top: 1px solid theme.$neutrals-three;
+    .subtotal {
+      @include common.typo_h4_highlight;
+    }
   }
 
   .cart-and-title {
@@ -43,5 +47,6 @@
   border-radius: common.$border-radius;
   box-shadow: 0px 8px 100px 0px #0000000d;
   padding: 10px common.$padding-side;
-  margin-top: common.$margin-top;
+  margin: common.$margin-top 0;
+  text-align: center;
 }

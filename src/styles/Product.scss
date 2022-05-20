@@ -75,7 +75,7 @@
       .price {
         @include common.typo_caption1_highlight;
         padding: 5px;
-        width: 55px;
+        width: auto;
         text-align: center;
       }
     }
@@ -85,18 +85,6 @@
 
       .cart-small-btns {
         @include common.flex-start;
-      }
-
-      .yz-sm-btn {
-        background: theme.$neutrals-two;
-        border: 1px solid theme.$neutrals-three;
-        @include common.typo_h4_active;
-        padding: 5px 10px;
-        border-radius: common.$border-radius;
-      }
-
-      .yz-sm-btn:not(:last-child) {
-        margin-right: 10px;
       }
     }
   }

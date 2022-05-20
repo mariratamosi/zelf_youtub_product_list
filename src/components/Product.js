@@ -1,5 +1,6 @@
 import "../styles/Product.scss"
 import downvote from "../assets/downvote.svg"
+import YZButton from "./basic/Button"
 
 const Product = ({ item }) => {
   if (!item) return <div>Loading...</div>
@@ -42,8 +43,8 @@ const Product = ({ item }) => {
         </div>
         <div className="btns-and-collapse">
           <div className="cart-small-btns">
-            <div className="yz-sm-btn">Buy now</div>
-            <div className="yz-sm-btn">Add to cart</div>
+            <YZButton btnText={"Buy now"} btnClasses={"yz-sm-btn"} />
+            <YZButton btnText={"Add to cart"} btnClasses={"yz-sm-btn"} />
           </div>
           <div className="yz-icon">
             <img src={downvote} alt="Collapse"></img>
