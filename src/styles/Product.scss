@@ -58,7 +58,7 @@
       .yz-sm-btn {
         background: theme.$neutrals-two;
         border: 1px solid theme.$neutrals-three;
-        @include common.typo_h4_highlight;
+        @include common.typo_h4_active;
         padding: 5px 10px;
         border-radius: common.$border-radius;
       }
@@ -67,5 +67,14 @@
         margin-right: 10px;
       }
     }
+  }
+}
+
+.sc-item.collapsed {
+  .item-name {
+    width: 170px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }

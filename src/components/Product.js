@@ -7,7 +7,7 @@ const Product = ({ item }) => {
   // creator_banner_url, creator_icon_url, creator_name, creator_subscriber_count
 
   return (
-    <div className="sc-item">
+    <div className="sc-item collapsed">
       <div className="sc-item-image">
         <img src={item.image.replace("jpeg", "png")} alt="Collapse"></img>
       </div>
