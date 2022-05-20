@@ -86,6 +86,10 @@
       .cart-small-btns {
         @include common.flex-start;
       }
+
+      .yz-icon {
+        margin-top: 5px;
+      }
     }
   }
 }

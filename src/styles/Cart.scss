@@ -3,23 +3,18 @@
 
 .cart-container {
   border: 1px solid theme.$neutrals-three;
-  border-radius: common.$border-radius;
+  border-radius: common.$border-radius common.$border-radius 0 0;
   box-shadow: 0px 8px 100px 0px #0000000d;
   margin-top: common.$margin-top;
   overflow: hidden;
+  margin-bottom: 110px;
+  border-bottom: none;
+  flex: 1;
 
   .select-loader-container {
     background: theme.$neutrals-two;
     padding: 10px common.$padding-side;
     border-bottom: 1px solid theme.$neutrals-three;
-  }
-
-  .subtotal-container {
-    @include common.flex-space-between;
-    padding: 10px common.$padding-side;
-    background: theme.$neutrals-two;
-    border-top: 1px solid theme.$neutrals-three;
-    @include common.typo_h4_highlight;
   }
 
   .cart-and-title {
@@ -35,17 +30,7 @@
 
     .title {
       @include common.typo_h3_active;
+      margin-bottom: 5px;
     }
   }
-}
-
-.cart-checkout {
-  background: theme.$neutrals-two;
-  border: 1px solid theme.$neutrals-three;
-  border-radius: common.$border-radius;
-  box-shadow: 0px 8px 100px 0px #0000000d;
-  padding: 10px common.$padding-side;
-  margin: common.$margin-top 0;
-  text-align: center;
-  @include common.typo_h3_active;
 }

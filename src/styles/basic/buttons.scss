@@ -29,3 +29,11 @@
 .yz-sm-btn:not(:last-child) {
   margin-right: 10px;
 }
+
+.yz-fs-btn {
+  width: 100%;
+  padding: 10px common.$padding-side;
+  margin: common.$margin-top 0;
+  @include common.typo_h3_active;
+  height: common.$large-btn-height;
+}
