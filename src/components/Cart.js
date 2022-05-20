@@ -37,12 +37,7 @@ const Cart = ({ items, subtotal, title }) => {
             ))}
           </div>
         </div>
-        <div className="subtotal-container">
-          <div className="subtotal-text">Subtotal</div>
-          <div className="subtotal">${(subtotal / 100).toFixed(2)}</div>
-        </div>
       </div>
-      <div className="cart-checkout">Checkout</div>
     </>
   )
 }
