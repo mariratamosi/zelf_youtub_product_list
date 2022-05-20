@@ -1,4 +1,5 @@
 import "../styles/Profile.scss"
+import { numFormatter } from "../utility/Utility"
 
 import { useEffect } from "react"
 
@@ -27,7 +28,7 @@ const Profile = ({ profileInfo }) => {
           <div className="creator-name-subs">
             <div className="creator-name">{profileInfo.creator_name}</div>
             <div className="creator-subs-count">
-              {profileInfo.creator_subscriber_count} subscribers
+              {numFormatter(profileInfo.creator_subscriber_count)} subscribers
             </div>
           </div>
         </div>
