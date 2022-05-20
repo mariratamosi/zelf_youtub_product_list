@@ -9,6 +9,7 @@
   overflow: hidden;
   margin-bottom: 110px;
   border-bottom: none;
+  flex: 1;
 
   .select-loader-container {
     background: theme.$neutrals-two;
@@ -29,6 +30,7 @@
 
     .title {
       @include common.typo_h3_active;
+      margin-bottom: 5px;
     }
   }
 }
