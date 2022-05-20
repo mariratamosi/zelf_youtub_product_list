@@ -3,7 +3,14 @@
 
 .yz-navbar {
   @include common.flex-space-between;
-  height: 45px;
+  height: common.$nav-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  padding: 0 20px;
+  background: theme.$neutrals-one;
 
   .nav-info {
     @include common.flex-space-between;

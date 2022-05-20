@@ -19,9 +19,7 @@
     padding: 10px common.$padding-side;
     background: theme.$neutrals-two;
     border-top: 1px solid theme.$neutrals-three;
-    .subtotal {
-      @include common.typo_h4_highlight;
-    }
+    @include common.typo_h4_highlight;
   }
 
   .cart-and-title {
@@ -49,4 +47,5 @@
   padding: 10px common.$padding-side;
   margin: common.$margin-top 0;
   text-align: center;
+  @include common.typo_h3_active;
 }
