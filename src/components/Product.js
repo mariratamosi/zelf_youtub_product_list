@@ -19,7 +19,14 @@ const Product = ({ item }) => {
               <span className="sold-by-brand">{item.sold_by_brand}</span>
             </div>
             <div className="item-name">{item.name}</div>
-            <div className="item-color">{item.color}</div>
+            <div className="item-color-container">
+              <div className="color-count">1</div>
+              <div className="color-dot-between"></div>
+              <div className="item-color-thumbnail">
+                <img src={item.color_thumbnail} alt=""></img>
+              </div>
+              <div className="item-color">{item.color}</div>
+            </div>
           </div>
           <div className="desc-right">
             <div className="org-price price">${item.price_in_cents / 1000}</div>

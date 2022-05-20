@@ -33,9 +33,26 @@
         @include common.typo_h3_active;
       }
 
-      .item-color {
-        @include common.typo_h4_active;
-        color: theme.$neutrals-four;
+      .item-color-container {
+        @include common.flex-start;
+        .color-count,
+        .item-color {
+          @include common.typo_h4_active;
+          color: theme.$neutrals-four;
+          position: relative;
+        }
+
+        .item-color-thumbnail img {
+          @include common.yz-circle(12px, theme.$neutrals-five);
+        }
+
+        .color-dot-between {
+          @include common.yz-circle(3px, theme.$neutrals-five);
+        }
+
+        & > * {
+          margin-right: 8px;
+        }
       }
 
       .org-price {

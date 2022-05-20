@@ -18,3 +18,5 @@ You may also see any lint errors in the console.
 ### Confusions
 
 - Checkout should be always visible? But there is already a Cart icon up there!
+
+- What if there is multiple color? how will the json be?
