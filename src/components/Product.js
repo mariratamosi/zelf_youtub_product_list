@@ -29,9 +29,14 @@ const Product = ({ item }) => {
             </div>
           </div>
           <div className="desc-right">
-            <div className="org-price price">${item.price_in_cents / 1000}</div>
+            {item.price_in_cents !== item.sale_price_in_cents && (
+              <div className="org-price price">
+                ${(item.price_in_cents / 100).toFixed(2)}
+              </div>
+            )}
+
             <div className="sale-price price">
-              ${item.sale_price_in_cents / 1000}
+              ${(item.sale_price_in_cents / 100).toFixed(2)}
             </div>
           </div>
         </div>

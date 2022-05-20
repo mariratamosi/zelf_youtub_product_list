@@ -5,8 +5,12 @@
   @include common.flex-start;
   margin-bottom: 15px;
 
+  .sc-item-image {
+    width: 30%;
+  }
+
   .sc-item-image img {
-    width: 50px;
+    width: 60px;
     border-radius: common.$border-radius;
   }
 
@@ -31,10 +35,13 @@
 
       .item-name {
         @include common.typo_h3_active;
+        margin: 3px 0;
       }
 
       .item-color-container {
         @include common.flex-start;
+        margin-bottom: 3px;
+
         .color-count,
         .item-color {
           @include common.typo_h4_active;
@@ -60,8 +67,16 @@
         text-decoration: line-through;
       }
 
+      .sale-price {
+        background: theme.$neutrals-three;
+        border-radius: common.$border-radius;
+      }
+
       .price {
         @include common.typo_caption1_highlight;
+        padding: 5px;
+        width: 55px;
+        text-align: center;
       }
     }
 
