@@ -1,3 +1,7 @@
+$border-radius: 5px;
+$padding-side: 15px;
+$margin-top: 15px;
+
 @mixin flex-space-between {
   display: flex;
   justify-content: space-between;
@@ -21,4 +25,11 @@
   height: $dia;
   border-radius: 50%;
   background-color: $bg;
+}
+
+@mixin yz-icon-img {
+  width: 35px;
+}
+
+@mixin yz-btn {
 }

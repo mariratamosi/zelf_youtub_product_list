@@ -1,0 +1,100 @@
+@use 'common';
+@use "theme";
+
+.sc-item {
+  @include common.flex-start;
+  margin-bottom: 15px;
+
+  .sc-item-image {
+    width: 30%;
+  }
+
+  .sc-item-image img {
+    width: 60px;
+    border-radius: common.$border-radius;
+  }
+
+  .desc-and-btns {
+    width: 100%;
+    margin-left: 15px;
+
+    .sc-item-short-desc {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .sold-by-text {
+        @include common.typo_caption1_active;
+        color: theme.$neutrals-four;
+      }
+
+      .sold-by-brand {
+        @include common.typo_caption1_highlight;
+        margin-left: 3px;
+      }
+
+      .item-name {
+        @include common.typo_h3_active;
+        margin: 3px 0;
+      }
+
+      .item-color-container {
+        @include common.flex-start;
+        margin-bottom: 3px;
+
+        .color-count,
+        .item-color {
+          @include common.typo_h4_active;
+          color: theme.$neutrals-four;
+          position: relative;
+        }
+
+        .item-color-thumbnail img {
+          @include common.yz-circle(12px, theme.$neutrals-five);
+        }
+
+        .color-dot-between {
+          @include common.yz-circle(3px, theme.$neutrals-five);
+        }
+
+        & > * {
+          margin-right: 8px;
+        }
+      }
+
+      .org-price {
+        color: theme.$neutrals-four;
+        text-decoration: line-through;
+      }
+
+      .sale-price {
+        background: theme.$neutrals-three;
+        border-radius: common.$border-radius;
+      }
+
+      .price {
+        @include common.typo_caption1_highlight;
+        padding: 5px;
+        width: auto;
+        text-align: center;
+      }
+    }
+
+    .btns-and-collapse {
+      @include common.flex-space-between;
+
+      .cart-small-btns {
+        @include common.flex-start;
+      }
+    }
+  }
+}
+
+.sc-item.collapsed {
+  .item-name {
+    width: 170px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
