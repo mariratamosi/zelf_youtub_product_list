@@ -1,6 +1,8 @@
 $border-radius: 5px;
 $padding-side: 15px;
 $margin-top: 15px;
+$nav-height: 50px;
+$body-padding: 20px;
 
 @mixin flex-space-between {
   display: flex;
