@@ -17,11 +17,11 @@
 
   .creator-name-icon {
     @include common.flex-start;
-    padding: 10px common.$padding-side;
+    padding: 8px common.$padding-side;
 
     .creator-icon {
       img {
-        @include common.yz-circle(45px, "white");
+        @include common.yz-circle(42px, "white");
       }
     }
 
@@ -31,7 +31,7 @@
 
     .creator-name {
       @include common.typo_h3_active;
-      margin-bottom: 5px;
+      margin-bottom: 2px;
     }
 
     .creator-subs-count {

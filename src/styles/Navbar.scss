@@ -3,7 +3,7 @@
 
 .yz-navbar {
   @include common.flex-space-between;
-  height: 50px;
+  height: 45px;
 
   .nav-info {
     @include common.flex-space-between;
@@ -22,6 +22,10 @@
         @include common.flex-center;
         bottom: 3px;
         right: 0;
+      }
+
+      img {
+        height: 25px;
       }
     }
   }

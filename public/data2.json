@@ -1,0 +1,68 @@
+{
+  "session_id": "bfecb9c2-481e-4c0f-8b24-27e7feb6e80c",
+  "cart_title": "The Ultimate Headphone Battle",
+  "creator_statics": {
+    "creator_name": "Marques Brownlee",
+    "creator_icon_url": "https://hellozelf-dev.nyc3.cdn.digitaloceanspaces.com/scratch/ahmed_icon.jpeg",
+    "creator_banner_url": "https://hellozelf-dev.nyc3.cdn.digitaloceanspaces.com/scratch/ahmed_banner.jpeg",
+    "creator_subscriber_count": 3450
+  },
+  "items": {
+    "1": {
+      "name": "WH-1000XM4 Wireless Noise Cancellor",
+      "sold_by_brand": "Sony",
+      "color": "Black",
+      "color_thumbnail": "https://www.jcrew.com/s7-img-facade/BA425_HT0804_sw?$pdp_sw20$",
+      "price_in_cents": 27500,
+      "sale_price_in_cents": 27500,
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MX412?wid=2104&hei=2980&fmt=jpeg&qlt=95&.v=1580420170758"
+    },
+    "2": {
+      "name": "AirPods Max",
+      "sold_by_brand": "Apple",
+      "color": "Sky blue",
+      "color_thumbnail": "https://www.jcrew.com/s7-img-facade/BC466_SU7909_sw?$pdp_sw20$",
+      "price_in_cents": 4000,
+      "sale_price_in_cents": 3000,
+      "image": "https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/pdp_images/7659_14562.jpg"
+    },
+    "3": {
+      "name": "Headphone Three",
+      "sold_by_brand": "Bose",
+      "color": "Blue",
+      "color_thumbnail": "https://www.jcrew.com/s7-img-facade/AZ966_SU7781_sw?$pdp_sw20$",
+      "price_in_cents": 19999,
+      "sale_price_in_cents": 19999,
+      "image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/12/01/18/headphones-alamy.jpg?width=990&auto=webp&quality=75&crop=982:726,smart"
+    },
+    "4": {
+      "name": "Headphone One",
+      "sold_by_brand": "Sony",
+      "color": "Black",
+      "color_thumbnail": "https://www.jcrew.com/s7-img-facade/BA425_HT0804_sw?$pdp_sw20$",
+      "price_in_cents": 27500,
+      "sale_price_in_cents": 27500,
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MX412?wid=2104&hei=2980&fmt=jpeg&qlt=95&.v=1580420170758"
+    },
+    "5": {
+      "name": "Headphone Two",
+      "sold_by_brand": "Apple",
+      "color": "Blue",
+      "color_thumbnail": "https://www.jcrew.com/s7-img-facade/BC466_SU7909_sw?$pdp_sw20$",
+      "price_in_cents": 4000,
+      "sale_price_in_cents": 3000,
+      "image": "https://cdn11.bigcommerce.com/s-k11cg5mzh9/content/pdp_images/7659_14562.jpg"
+    },
+    "6": {
+      "name": "Headphone Three",
+      "sold_by_brand": "Bose",
+      "color": "Blue",
+      "color_thumbnail": "https://www.jcrew.com/s7-img-facade/AZ966_SU7781_sw?$pdp_sw20$",
+      "price_in_cents": 19999,
+      "sale_price_in_cents": 19999,
+      "image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/12/01/18/headphones-alamy.jpg?width=990&auto=webp&quality=75&crop=982:726,smart"
+    }
+  },
+
+  "subtotal_price_in_cents": 50499
+}

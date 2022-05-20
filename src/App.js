@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     console.log("product start")
-    fetchBuildingProducListData("data.json")
+    fetchBuildingProducListData("data2.json")
       .then((pageData) => {
         console.log(pageData)
         setProfileInfo(pageData.creator_statics)
