@@ -1,4 +1,16 @@
+@use '../common';
+@use "../theme";
+
 .loading {
+  display: flex;
+  height: 100%;
+  margin: auto;
+
+  .dot {
+    @include common.yz-circle(10px, theme.$custom-red);
+    margin: 5px;
+  }
+
   .first {
     margin-left: 12px;
     transform-origin: top right;
