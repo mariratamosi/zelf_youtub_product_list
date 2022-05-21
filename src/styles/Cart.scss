@@ -21,8 +21,24 @@
     border-bottom: 1px solid theme.$neutrals-three;
   }
 
+  .cart-items {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
+
   .cart-and-title {
     padding: 10px common.$padding-side;
+
+    &.collapsed {
+      .cart-title-collapsible .yz-icon {
+        transform: rotate(180deg);
+      }
+
+      .cart-items {
+        height: 0;
+        opacity: 0;
+      }
+    }
   }
 
   .cart-title-collapsible {

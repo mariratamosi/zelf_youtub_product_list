@@ -2,10 +2,15 @@ import "../styles/Cart.scss"
 import Product from "./Product"
 import downvote from "../assets/downvote.svg"
 import useStore from "../store/store"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 const Cart = ({ items, title }) => {
   const selectedItems = useStore((state) => state.selectedItems)
+  const [isCollapsed, setIsCollapsed] = useState(false)
+
+  const handleCollapseOrExpand = () => {
+    setIsCollapsed(!isCollapsed)
+  }
 
   useEffect(() => {
     if (items) {
@@ -28,8 +33,13 @@ const Cart = ({ items, title }) => {
           <div className="select-text">Select Items</div>
           <div className="select-loader"></div>
         </div>
-        <div className="cart-and-title">
-          <div className="cart-title-collapsible">
+        <div
+          className={`cart-and-title ${isCollapsed ? "collapsed" : "expanded"}`}
+        >
+          <div
+            className="cart-title-collapsible"
+            onClick={handleCollapseOrExpand}
+          >
             <div className="yz-icon">
               <img src={downvote} alt="Collapse"></img>
             </div>
