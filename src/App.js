@@ -2,10 +2,7 @@ import React, { useEffect, useState } from "react"
 import "./styles/App.scss"
 import Navbar from "./components/Navbar"
 import { fetchBuildingProducListData } from "./service/networkService"
-import Profile from "./components/Profile"
-import Cart from "./components/Cart"
-import YZButton from "./components/basic/Button"
-import Subtotal from "./components/Subtotal"
+import ProductListPage from "./components/ProductListPage"
 
 function App() {
   const [profileInfo, setProfileInfo] = useState(null)
@@ -14,7 +11,6 @@ function App() {
   const [title, setTitle] = useState("")
 
   useEffect(() => {
-    console.log("product start")
     fetchBuildingProducListData("data2.json")
       .then((pageData) => {
         console.log(pageData)
@@ -31,12 +27,12 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Profile profileInfo={profileInfo} />
-      <Cart items={items} subtotal={subtotal} title={title} />
-      <Subtotal subtotal={subtotal} />
-      <div className="stick-bottom">
-        <YZButton btnText={"Checkout"} btnClasses={"yz-fs-btn"} />
-      </div>
+      <ProductListPage
+        profileInfo={profileInfo}
+        items={items}
+        subtotal={subtotal}
+        title={title}
+      />
     </div>
   )
 }

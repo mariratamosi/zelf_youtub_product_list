@@ -10,7 +10,9 @@ export const fetchBuildingProducListData = (filename) => {
         return response.json()
       })
       .then(function (myJson) {
-        resolve(myJson)
+        setTimeout(() => {
+          resolve(myJson)
+        }, 1000)
       })
       .catch((error) => {
         reject(error)
