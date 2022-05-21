@@ -2,9 +2,12 @@ import "../styles/Navbar.scss"
 import cart from "../assets/cart.svg"
 import zelf_text from "../assets/Zelf.svg"
 import zelf_logo from "../assets/logo.svg"
+import { useEffect, useState } from "react"
+import useStore from "../store/store"
 
 function Navbar() {
-  const count = 5
+  const selectedItems = useStore((state) => state.selectedItems)
+
   return (
     <div className="yz-navbar">
       <a
@@ -16,7 +19,7 @@ function Navbar() {
         <img src={zelf_text} alt="Zelf."></img>
       </a>
       <div className="nav-info">
-        <div className="cart" data-count={count}>
+        <div className="cart" data-count={selectedItems.length}>
           <img src={cart} alt="Cart"></img>
         </div>
         <a

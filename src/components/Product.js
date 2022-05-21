@@ -1,16 +1,35 @@
 import "../styles/Product.scss"
 import downvote from "../assets/downvote.svg"
 import YZButton from "./basic/Button"
+import useStore from "../store/store"
+import { useState } from "react"
 
 const Product = ({ item }) => {
-  if (!item) return <div>Loading...</div>
+  //TODO: if from another route, from checkout page, items needed to remove, handle that with useEffect
+  const addItemToStore = useStore((state) => state.addItemToStore)
+  const removeItemFromStore = useStore((state) => state.removeItemFromStore)
+  const selectedItems = useStore((state) => state.selectedItems)
+  const [isSelected, setIsSelected] = useState(
+    selectedItems.filter((selectedItem) => selectedItem.id === item.id).length
+  )
 
-  // creator_banner_url, creator_icon_url, creator_name, creator_subscriber_count
+  const addToCartOrRemove = () => {
+    if (!isSelected) {
+      addItemToStore(item)
+    } else {
+      console.log("remove item with ", item.id)
+      removeItemFromStore(item.id, item.sale_price_in_cents)
+    }
+
+    setIsSelected(!isSelected)
+  }
+
+  if (!item) return <div>Loading...</div>
 
   return (
     <div className="sc-item collapsed">
       <div className="sc-item-image">
-        <img src={item.image.replace("jpeg", "png")} alt="Collapse"></img>
+        <img src={item.image.replace("jpeg", "png")} alt={item.name}></img>
       </div>
       <div className="desc-and-btns">
         <div className="sc-item-short-desc">
@@ -44,7 +63,11 @@ const Product = ({ item }) => {
         <div className="btns-and-collapse">
           <div className="cart-small-btns">
             <YZButton btnText={"Buy now"} btnClasses={"yz-sm-btn"} />
-            <YZButton btnText={"Add to cart"} btnClasses={"yz-sm-btn"} />
+            <YZButton
+              btnText={isSelected ? "Remove" : "Add to cart"}
+              btnClasses={"yz-sm-btn"}
+              onClick={addToCartOrRemove}
+            />
           </div>
           <div className="yz-icon">
             <img src={downvote} alt="Collapse"></img>

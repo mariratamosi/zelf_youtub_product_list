@@ -11,26 +11,50 @@
   border-bottom: none;
   flex: 1;
 
+  .cart-title-collapsible .yz-icon img {
+    transition: all 0.3s linear;
+  }
+
+  &.empty {
+    margin-bottom: 70px;
+  }
+
   .select-loader-container {
     background: theme.$neutrals-two;
     padding: 10px common.$padding-side;
     border-bottom: 1px solid theme.$neutrals-three;
   }
 
+  .cart-items {
+    //opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
+
   .cart-and-title {
     padding: 10px common.$padding-side;
+
+    &.collapsed {
+      .cart-title-collapsible .yz-icon img {
+        transform: rotate(180deg);
+      }
+
+      .cart-items {
+        display: none;
+      }
+    }
   }
 
   .cart-title-collapsible {
     @include common.flex-start;
+    margin: common.$margin-top 0;
 
     .yz-icon img {
       @include common.yz-icon-img;
+      margin-right: 10px;
     }
 
     .title {
       @include common.typo_h3_active;
-      margin-bottom: 5px;
     }
   }
 }

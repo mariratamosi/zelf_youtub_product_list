@@ -5,6 +5,7 @@ import { fetchBuildingProducListData } from "./service/networkService"
 import Profile from "./components/Profile"
 import Cart from "./components/Cart"
 import YZButton from "./components/basic/Button"
+import Subtotal from "./components/Subtotal"
 
 function App() {
   const [profileInfo, setProfileInfo] = useState(null)
@@ -32,12 +33,7 @@ function App() {
       <Navbar />
       <Profile profileInfo={profileInfo} />
       <Cart items={items} subtotal={subtotal} title={title} />
-      <div className="stick-bottom-70">
-        <div className="subtotal-container">
-          <div className="subtotal-text">Subtotal</div>
-          <div className="subtotal">${(subtotal / 100).toFixed(2)}</div>
-        </div>
-      </div>
+      <Subtotal subtotal={subtotal} />
       <div className="stick-bottom">
         <YZButton btnText={"Checkout"} btnClasses={"yz-fs-btn"} />
       </div>

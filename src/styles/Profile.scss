@@ -36,7 +36,7 @@
     }
 
     .creator-subs-count {
-      @include common.typo_caption1_tone_down;
+      @include common.typo_caption1_active;
       color: theme.$neutrals-four;
     }
   }
