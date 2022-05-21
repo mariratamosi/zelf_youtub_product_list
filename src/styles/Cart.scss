@@ -26,7 +26,7 @@
   }
 
   .cart-items {
-    opacity: 1;
+    //opacity: 1;
     transition: all 0.5s ease-in-out;
   }
 
@@ -39,14 +39,14 @@
       }
 
       .cart-items {
-        height: 0;
-        opacity: 0;
+        display: none;
       }
     }
   }
 
   .cart-title-collapsible {
     @include common.flex-start;
+    margin: common.$margin-top 0;
 
     .yz-icon img {
       @include common.yz-icon-img;
