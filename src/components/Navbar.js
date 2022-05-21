@@ -4,15 +4,13 @@ import zelf_text from "../assets/Zelf.svg"
 import zelf_logo from "../assets/logo.svg"
 import { useEffect, useState } from "react"
 import useStore from "../store/store"
-import { countElem } from "../utility/Utility"
 
 function Navbar() {
   const selectedItems = useStore((state) => state.selectedItems)
-  const [selectedCount, setSelectedCount] = useState(countElem(selectedItems))
+  const [selectedCount, setSelectedCount] = useState(selectedItems.length)
 
   useEffect(() => {
-    console.log(selectedItems, countElem(selectedItems))
-    setSelectedCount(countElem(selectedItems))
+    setSelectedCount(selectedItems.length)
   }, [selectedItems])
 
   return (

@@ -12,7 +12,3 @@ const formatFloating = (num) => {
   if (Math.floor(num) === num) return num
   return num.toFixed(1)
 }
-
-export const countElem = (obj) => {
-  return Object.keys(obj).length
-}

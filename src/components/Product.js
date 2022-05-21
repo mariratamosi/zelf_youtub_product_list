@@ -4,10 +4,10 @@ import YZButton from "./basic/Button"
 import useStore from "../store/store"
 import { useState } from "react"
 
-const Product = ({ item, itemKey }) => {
+const Product = ({ item }) => {
   const selectedItems = useStore((state) => state.selectedItems)
   const [isSelected, setIsSelected] = useState(
-    selectedItems.filter((selectedItem) => selectedItem.id === itemKey).length
+    selectedItems.filter((selectedItem) => selectedItem.id === item.id).length
   )
 
   //TODO: if from another route, from checkout page, items needed to remove, handle that with useEffect
@@ -15,12 +15,11 @@ const Product = ({ item, itemKey }) => {
   const removeItemFromStore = useStore((state) => state.removeItemFromStore)
 
   const addToCartOrRemove = () => {
-    console.log("You clicked on the pink circle!")
     if (!isSelected) {
       addItemToStore(item)
     } else {
-      console.log("remove item with ", itemKey)
-      removeItemFromStore(itemKey)
+      console.log("remove item with ", item.id)
+      removeItemFromStore(item.id)
     }
 
     setIsSelected(!isSelected)
