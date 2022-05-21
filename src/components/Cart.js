@@ -1,6 +1,6 @@
 import "../styles/Cart.scss"
 import Product from "./Product"
-import downvote from "../assets/downvote.svg"
+import downvote from "../assets/downvote_.svg"
 import useStore from "../store/store"
 import { useEffect, useState } from "react"
 

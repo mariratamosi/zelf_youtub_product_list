@@ -11,6 +11,10 @@
   border-bottom: none;
   flex: 1;
 
+  .cart-title-collapsible .yz-icon img {
+    transition: all 0.3s linear;
+  }
+
   &.empty {
     margin-bottom: 70px;
   }
@@ -30,7 +34,7 @@
     padding: 10px common.$padding-side;
 
     &.collapsed {
-      .cart-title-collapsible .yz-icon {
+      .cart-title-collapsible .yz-icon img {
         transform: rotate(180deg);
       }
 
@@ -46,11 +50,11 @@
 
     .yz-icon img {
       @include common.yz-icon-img;
+      margin-right: 10px;
     }
 
     .title {
       @include common.typo_h3_active;
-      margin-bottom: 5px;
     }
   }
 }
