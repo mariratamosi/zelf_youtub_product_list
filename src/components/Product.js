@@ -19,7 +19,7 @@ const Product = ({ item }) => {
       addItemToStore(item)
     } else {
       console.log("remove item with ", item.id)
-      removeItemFromStore(item.id)
+      removeItemFromStore(item.id, item.sale_price_in_cents)
     }
 
     setIsSelected(!isSelected)
@@ -30,7 +30,7 @@ const Product = ({ item }) => {
   return (
     <div className="sc-item collapsed">
       <div className="sc-item-image">
-        <img src={item.image.replace("jpeg", "png")} alt="Collapse"></img>
+        <img src={item.image.replace("jpeg", "png")} alt={item.name}></img>
       </div>
       <div className="desc-and-btns">
         <div className="sc-item-short-desc">
