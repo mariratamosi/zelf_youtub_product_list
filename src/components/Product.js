@@ -1,11 +1,31 @@
 import "../styles/Product.scss"
 import downvote from "../assets/downvote.svg"
 import YZButton from "./basic/Button"
+import useStore from "../store/store"
+import { useState } from "react"
 
-const Product = ({ item }) => {
+const Product = ({ item, itemKey }) => {
+  const selectedItems = useStore((state) => Object.keys(state.selectedItems))
+  const [isSelected, setIsSelected] = useState(
+    Object.keys(selectedItems).indexOf(itemKey) !== -1
+  )
+
+  //TODO: if from another route, from checkout page, items needed to remove, handle that with useEffect
+  const addItemToStore = useStore((state) => state.addItemToStore)
+  const removeItemFromStore = useStore((state) => state.removeItemFromStore)
+
+  const addToCartOrRemove = () => {
+    console.log("You clicked on the pink circle!")
+    if (!isSelected) {
+      addItemToStore(itemKey, item)
+    } else {
+      removeItemFromStore(itemKey)
+    }
+
+    setIsSelected(!isSelected)
+  }
+
   if (!item) return <div>Loading...</div>
-
-  // creator_banner_url, creator_icon_url, creator_name, creator_subscriber_count
 
   return (
     <div className="sc-item collapsed">
@@ -44,7 +64,11 @@ const Product = ({ item }) => {
         <div className="btns-and-collapse">
           <div className="cart-small-btns">
             <YZButton btnText={"Buy now"} btnClasses={"yz-sm-btn"} />
-            <YZButton btnText={"Add to cart"} btnClasses={"yz-sm-btn"} />
+            <YZButton
+              btnText={isSelected ? "Remove" : "Add to cart"}
+              btnClasses={"yz-sm-btn"}
+              onClick={addToCartOrRemove}
+            />
           </div>
           <div className="yz-icon">
             <img src={downvote} alt="Collapse"></img>
