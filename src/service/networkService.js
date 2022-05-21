@@ -9,8 +9,8 @@ export const fetchBuildingProducListData = (filename) => {
       .then(function (response) {
         return response.json()
       })
-      .then(function (myJson) {
-        resolve(myJson)
+      .then(function (data) {
+        resolve(data)
       })
       .catch((error) => {
         reject(error)
