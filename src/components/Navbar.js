@@ -2,7 +2,6 @@ import "../styles/Navbar.scss"
 import cart from "../assets/cart.svg"
 import zelf_text from "../assets/Zelf.svg"
 import zelf_logo from "../assets/logo.svg"
-import { useEffect, useState } from "react"
 import useStore from "../store/store"
 
 function Navbar() {
