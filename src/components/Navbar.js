@@ -7,11 +7,6 @@ import useStore from "../store/store"
 
 function Navbar() {
   const selectedItems = useStore((state) => state.selectedItems)
-  const [selectedCount, setSelectedCount] = useState(selectedItems.length)
-
-  useEffect(() => {
-    setSelectedCount(selectedItems.length)
-  }, [selectedItems])
 
   return (
     <div className="yz-navbar">
@@ -24,7 +19,7 @@ function Navbar() {
         <img src={zelf_text} alt="Zelf."></img>
       </a>
       <div className="nav-info">
-        <div className="cart" data-count={selectedCount}>
+        <div className="cart" data-count={selectedItems.length}>
           <img src={cart} alt="Cart"></img>
         </div>
         <a

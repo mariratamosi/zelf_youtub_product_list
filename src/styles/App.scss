@@ -21,6 +21,17 @@
   border-radius: 0 0 common.$border-radius common.$border-radius;
 }
 
+.subtotal-parent.empty {
+  background: transparent;
+  .subtotal-container * {
+    visibility: hidden;
+  }
+  .subtotal-container {
+    border-top: none;
+    background: transparent;
+  }
+}
+
 .stick-bottom {
   position: fixed;
   bottom: 0;

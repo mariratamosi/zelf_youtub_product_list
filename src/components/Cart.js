@@ -1,15 +1,15 @@
 import "../styles/Cart.scss"
 import Product from "./Product"
 import downvote from "../assets/downvote.svg"
-
+import useStore from "../store/store"
 import { useEffect } from "react"
 
-const Cart = ({ items, subtotal, title }) => {
-  useEffect(() => {
-    console.log(items)
+const Cart = ({ items, title }) => {
+  const selectedItems = useStore((state) => state.selectedItems)
 
+  useEffect(() => {
     if (items) {
-      Object.keys(items).map((key, idx) => (items[key].id = key))
+      Object.keys(items).map((key) => (items[key].id = key))
     }
   }, [items])
 
@@ -19,7 +19,11 @@ const Cart = ({ items, subtotal, title }) => {
 
   return (
     <>
-      <div className="cart-container">
+      <div
+        className={`cart-container ${
+          selectedItems.length ? "non-empty" : "empty"
+        }`}
+      >
         <div className="select-loader-container">
           <div className="select-text">Select Items</div>
           <div className="select-loader"></div>

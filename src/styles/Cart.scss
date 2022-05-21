@@ -11,6 +11,10 @@
   border-bottom: none;
   flex: 1;
 
+  &.empty {
+    margin-bottom: 70px;
+  }
+
   .select-loader-container {
     background: theme.$neutrals-two;
     padding: 10px common.$padding-side;
