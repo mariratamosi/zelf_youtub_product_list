@@ -5,9 +5,9 @@ import useStore from "../store/store"
 import { useState } from "react"
 
 const Product = ({ item, itemKey }) => {
-  const selectedItems = useStore((state) => Object.keys(state.selectedItems))
+  const selectedItems = useStore((state) => state.selectedItems)
   const [isSelected, setIsSelected] = useState(
-    Object.keys(selectedItems).indexOf(itemKey) !== -1
+    selectedItems.filter((selectedItem) => selectedItem.id === itemKey).length
   )
 
   //TODO: if from another route, from checkout page, items needed to remove, handle that with useEffect
@@ -17,8 +17,9 @@ const Product = ({ item, itemKey }) => {
   const addToCartOrRemove = () => {
     console.log("You clicked on the pink circle!")
     if (!isSelected) {
-      addItemToStore(itemKey, item)
+      addItemToStore(item)
     } else {
+      console.log("remove item with ", itemKey)
       removeItemFromStore(itemKey)
     }
 

@@ -2,14 +2,16 @@ import create from "zustand"
 import { devtools } from "zustand/middleware"
 const useStore = create(
   devtools((set) => ({
-    selectedItems: { a: "i am selected" },
-    addItemToStore: (keys, value) =>
+    selectedItems: [],
+    addItemToStore: (value) =>
       set((state) => ({
-        selectedItems: { ...state.selectedItems, [keys]: value },
+        selectedItems: [...state.selectedItems, value],
       })),
-    removeItemFromStore: (keys) =>
+    removeItemFromStore: (id) =>
       set((state) => ({
-        selectedItems: { ...state.selectedItems, [keys]: undefined },
+        selectedItems: state.selectedItems.filter(
+          (selectedItem) => selectedItem.id !== id
+        ),
       })),
   }))
 )

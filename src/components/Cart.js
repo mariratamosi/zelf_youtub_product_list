@@ -9,7 +9,7 @@ const Cart = ({ items, subtotal, title }) => {
     console.log(items)
 
     if (items) {
-      Object.keys(items).map((key, idx) => <p key={idx}>items[key].name</p>)
+      Object.keys(items).map((key, idx) => (items[key].id = key))
     }
   }, [items])
 
