@@ -5,7 +5,7 @@ import { fetchBuildingProducListData } from "./service/networkService"
 import ProductListPage from "./components/ProductListPage"
 
 function App() {
-  const [pageData, setPageData] = useState("")
+  const [pageData, setPageData] = useState(null)
 
   useEffect(() => {
     fetchBuildingProducListData("data2.json")

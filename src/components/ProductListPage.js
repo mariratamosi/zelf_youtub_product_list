@@ -2,9 +2,10 @@ import Profile from "./Profile"
 import Cart from "./Cart"
 import YZButton from "./basic/Button"
 import Subtotal from "./Subtotal"
+import Loading from "./basic/Loading"
 
 function ProductListPage({ pageData }) {
-  return (
+  return pageData != null ? (
     <>
       <Profile profileInfo={pageData.creator_statics} />
       <Cart
@@ -17,6 +18,8 @@ function ProductListPage({ pageData }) {
         <YZButton btnText={"Checkout"} btnClasses={"yz-fs-btn"} />
       </div>
     </>
+  ) : (
+    <Loading />
   )
 }
 
