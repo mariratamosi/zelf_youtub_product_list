@@ -21,7 +21,7 @@
 
     .cart {
       position: relative;
-      &::before {
+      &.non-empty::before {
         position: absolute;
         content: attr(data-count);
         @include common.yz-circle(13px, theme.$custom-red);

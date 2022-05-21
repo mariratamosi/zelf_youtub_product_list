@@ -2,10 +2,10 @@ import "../../styles/basic/loading.scss"
 
 function Loading() {
   return (
-    <div class="loading">
-      <div class="dot first"></div>
-      <div class="dot second"></div>
-      <div class="dot third"></div>
+    <div className="loading">
+      <div className="dot first"></div>
+      <div className="dot second"></div>
+      <div className="dot third"></div>
     </div>
   )
 }
