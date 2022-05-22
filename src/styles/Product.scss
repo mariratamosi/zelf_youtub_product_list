@@ -6,7 +6,7 @@
   margin-bottom: 15px;
 
   .sc-item-image {
-    width: 30%;
+    flex: 1;
   }
 
   .sc-item-image img {
@@ -17,11 +17,13 @@
   .desc-and-btns {
     width: 100%;
     margin-left: 15px;
+    flex: 3;
 
     .sc-item-short-desc {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      flex-wrap: wrap;
 
       .sold-by-text {
         @include common.typo_caption1_active;
@@ -65,6 +67,7 @@
       .org-price {
         color: theme.$neutrals-four;
         text-decoration: line-through;
+        margin-bottom: 2px;
       }
 
       .sale-price {
@@ -96,7 +99,7 @@
 
 .sc-item.collapsed {
   .item-name {
-    width: 170px;
+    width: 150px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
