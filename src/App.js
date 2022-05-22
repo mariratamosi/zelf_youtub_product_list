@@ -3,11 +3,8 @@ import "./styles/App.scss"
 import Navbar from "./components/Navbar"
 import { fetchBuildingProducListData } from "./service/networkService"
 import ProductListPage from "./components/ProductListPage"
-import useStore from "./store/store"
 
 function App() {
-  const selectedItems = useStore((state) => state.selectedItems)
-
   const [pageData, setPageData] = useState(null)
 
   useEffect(() => {
@@ -22,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar itemCount={selectedItems.length} />
+      <Navbar />
       <ProductListPage pageData={pageData} />
     </div>
   )
