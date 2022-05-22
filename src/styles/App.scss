@@ -13,11 +13,15 @@
 
 @include common.for-size(mini-phone-or-zoomed) {
   .App {
-    padding: 0;
+    padding: 5px;
   }
 
   .full-sticked {
-    padding: 0;
+    padding: 0 5px !important;
+  }
+
+  .sc-item .sc-item-image {
+    flex: inherit !important;
   }
 }
 
