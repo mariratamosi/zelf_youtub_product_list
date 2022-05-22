@@ -1,6 +1,6 @@
-import "../styles/Product.scss"
-import downvote from "../assets/downvote.svg"
-import YZButton from "./basic/Button"
+import "../../styles/Product.scss"
+import downvote from "../../assets/downvote.svg"
+import YZButton from "../basic/Button"
 import { useState } from "react"
 
 const Product = ({

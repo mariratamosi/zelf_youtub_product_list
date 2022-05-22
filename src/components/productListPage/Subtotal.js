@@ -1,4 +1,4 @@
-import "../styles/subtotal.scss"
+import "../../styles/subtotal.scss"
 
 const Subtotal = ({ subtotalFromStore }) => {
   return (

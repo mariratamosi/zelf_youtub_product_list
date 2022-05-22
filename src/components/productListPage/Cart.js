@@ -1,5 +1,5 @@
-import "../styles/Cart.scss"
-import CollapsibleContent from "./basic/CollapsibleContent"
+import "../../styles/Cart.scss"
+import CollapsibleContent from "../basic/CollapsibleContent"
 import Product from "./Product"
 
 const Cart = ({

@@ -1,5 +1,5 @@
-import "../styles/Profile.scss"
-import { numFormatter } from "../utility/Utility"
+import "../../styles/Profile.scss"
+import { numFormatter } from "../../utility/Utility"
 
 const Profile = ({ profileInfo }) => {
   return (
