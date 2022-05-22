@@ -11,43 +11,19 @@
   flex-flow: column;
 }
 
-.subtotal-container {
-  @include common.flex-space-between;
-  padding: 10px common.$padding-side;
-  background: theme.$neutrals-two;
-  @include common.typo_h4_highlight;
-  height: common.$large-btn-height; //calc(#{common.$large-btn-height} + #{common.$margin-top})
-  border: 1px solid theme.$neutrals-three;
-  border-radius: 0 0 common.$border-radius common.$border-radius;
-}
-
-.subtotal-parent.empty {
-  background: transparent;
-  .subtotal-container * {
-    visibility: hidden;
+@include common.for-size(tablet-portrait-up) {
+  #root {
+    background: theme.$neutrals-one;
   }
-  .subtotal-container {
-    border-top: none;
-    background: transparent;
+
+  .App {
+    width: 500px;
+    margin: auto;
   }
-}
 
-.stick-bottom {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  padding: 0 common.$body-padding;
-  z-index: 9999;
-  width: 100%;
-  background: theme.$neutrals-one;
-}
-
-.stick-bottom-70 {
-  position: fixed;
-  bottom: 70px;
-  left: 0;
-  padding: 0 common.$body-padding;
-  z-index: 9999;
-  width: 100%;
-  background: theme.$neutrals-one;
+  .full-sticked {
+    width: 500px !important;
+    left: 50% !important;
+    transform: translate(-50%, 0);
+  }
 }
