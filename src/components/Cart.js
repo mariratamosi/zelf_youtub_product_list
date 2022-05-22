@@ -1,13 +1,16 @@
 import "../styles/Cart.scss"
 import Product from "./Product"
 import downvote from "../assets/downvote_.svg"
-import useStore from "../store/store"
 import { useState } from "react"
 
-const Cart = ({ items, title }) => {
-  const selectedItems = useStore((state) => state.selectedItems)
+const Cart = ({
+  items,
+  title,
+  addItemToStore,
+  removeItemFromStore,
+  selectedItems,
+}) => {
   const [isCollapsed, setIsCollapsed] = useState(false)
-
   const handleCollapseOrExpand = () => {
     setIsCollapsed(!isCollapsed)
   }
@@ -38,7 +41,15 @@ const Cart = ({ items, title }) => {
           <div className="cart-items">
             {Object.keys(items).map((key, idx) => {
               items[key].key = key
-              return <Product key={idx} item={items[key]}></Product>
+              return (
+                <Product
+                  key={idx}
+                  item={items[key]}
+                  addItemToStore={addItemToStore}
+                  removeItemFromStore={removeItemFromStore}
+                  selectedItems={selectedItems}
+                ></Product>
+              )
             })}
           </div>
         </div>

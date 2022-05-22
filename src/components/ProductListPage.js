@@ -7,6 +7,9 @@ import useStore from "../store/store"
 
 function ProductListPage({ pageData }) {
   const subtotalFromStore = useStore((state) => state.subtotal)
+  const addItemToStore = useStore((state) => state.addItemToStore)
+  const removeItemFromStore = useStore((state) => state.removeItemFromStore)
+  const selectedItems = useStore((state) => state.selectedItems)
 
   return pageData != null ? (
     <>
@@ -15,6 +18,9 @@ function ProductListPage({ pageData }) {
         items={pageData.items}
         subtotal={pageData.subtotal_price_in_cents}
         title={pageData.cart_title}
+        addItemToStore={addItemToStore}
+        removeItemFromStore={removeItemFromStore}
+        selectedItems={selectedItems}
       />
       <Subtotal subtotalFromStore={subtotalFromStore} />
       <div className="stick-bottom">

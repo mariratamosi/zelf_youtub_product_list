@@ -1,14 +1,14 @@
 import "../styles/Product.scss"
 import downvote from "../assets/downvote.svg"
 import YZButton from "./basic/Button"
-import useStore from "../store/store"
 import { useState } from "react"
 
-const Product = ({ item }) => {
-  //TODO: if from another route, from checkout page, items needed to remove, handle that with useEffect
-  const addItemToStore = useStore((state) => state.addItemToStore)
-  const removeItemFromStore = useStore((state) => state.removeItemFromStore)
-  const selectedItems = useStore((state) => state.selectedItems)
+const Product = ({
+  item,
+  addItemToStore,
+  removeItemFromStore,
+  selectedItems,
+}) => {
   const [isSelected, setIsSelected] = useState(
     selectedItems.filter((selectedItem) => selectedItem.id === item.id).length
   )
@@ -17,14 +17,11 @@ const Product = ({ item }) => {
     if (!isSelected) {
       addItemToStore(item)
     } else {
-      console.log("remove item with ", item.id)
       removeItemFromStore(item.id, item.sale_price_in_cents)
     }
 
     setIsSelected(!isSelected)
   }
-
-  if (!item) return <div>Loading...</div>
 
   return (
     <div className="sc-item collapsed">
