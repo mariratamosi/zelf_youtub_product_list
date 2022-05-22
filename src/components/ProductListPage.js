@@ -1,11 +1,25 @@
+import { useEffect, useState } from "react"
 import Profile from "./Profile"
 import Cart from "./Cart"
 import YZButton from "./basic/Button"
 import Subtotal from "./Subtotal"
 import Loading from "./basic/Loading"
 import useStore from "../store/store"
+import { fetchBuildingProducListData } from "../service/networkService"
 
-function ProductListPage({ pageData }) {
+function ProductListPage() {
+  const [pageData, setPageData] = useState(null)
+
+  useEffect(() => {
+    fetchBuildingProducListData("data2.json")
+      .then((pageData) => {
+        setPageData(pageData)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }, [])
+
   const subtotalFromStore = useStore((state) => state.subtotal)
   const addItemToStore = useStore((state) => state.addItemToStore)
   const removeItemFromStore = useStore((state) => state.removeItemFromStore)
