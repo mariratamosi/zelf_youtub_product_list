@@ -1,26 +1,19 @@
 import "../styles/Cart.scss"
 import Product from "./Product"
 import downvote from "../assets/downvote_.svg"
-import useStore from "../store/store"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
-const Cart = ({ items, title }) => {
-  const selectedItems = useStore((state) => state.selectedItems)
+const Cart = ({
+  items,
+  title,
+  addItemToStore,
+  removeItemFromStore,
+  selectedItems,
+}) => {
   const [isCollapsed, setIsCollapsed] = useState(false)
-
   const handleCollapseOrExpand = () => {
     setIsCollapsed(!isCollapsed)
   }
-
-  useEffect(() => {
-    if (items) {
-      Object.keys(items).map((key) => (items[key].id = key))
-    }
-  }, [items])
-
-  if (!items) return <div>Loading...</div>
-
-  // creator_banner_url, creator_icon_url, creator_name, creator_subscriber_count
 
   return (
     <>
@@ -46,9 +39,17 @@ const Cart = ({ items, title }) => {
             <div className="title">{title}</div>
           </div>
           <div className="cart-items">
-            {Object.keys(items).map((key, idx) => (
-              <Product key={idx} item={items[key]}></Product>
-            ))}
+            {Object.keys(items).map((key, idx) => {
+              return (
+                <Product
+                  key={idx}
+                  item={items[key]}
+                  addItemToStore={addItemToStore}
+                  removeItemFromStore={removeItemFromStore}
+                  selectedItems={selectedItems}
+                ></Product>
+              )
+            })}
           </div>
         </div>
       </div>

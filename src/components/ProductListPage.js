@@ -1,10 +1,31 @@
+import { useEffect, useState } from "react"
 import Profile from "./Profile"
 import Cart from "./Cart"
 import YZButton from "./basic/Button"
 import Subtotal from "./Subtotal"
 import Loading from "./basic/Loading"
+import useStore from "../store/store"
+import { fetchBuildingProducListData } from "../service/networkService"
 
-function ProductListPage({ pageData }) {
+function ProductListPage() {
+  const [pageData, setPageData] = useState(null)
+
+  useEffect(() => {
+    fetchBuildingProducListData("data2.json")
+      .then((pageData) => {
+        setPageData(pageData)
+      })
+      .catch((err) => {
+        //TODO: add error state
+        console.log(err)
+      })
+  }, [])
+
+  const subtotalFromStore = useStore((state) => state.subtotal)
+  const addItemToStore = useStore((state) => state.addItemToStore)
+  const removeItemFromStore = useStore((state) => state.removeItemFromStore)
+  const selectedItems = useStore((state) => state.selectedItems)
+
   return pageData != null ? (
     <>
       <Profile profileInfo={pageData.creator_statics} />
@@ -12,8 +33,11 @@ function ProductListPage({ pageData }) {
         items={pageData.items}
         subtotal={pageData.subtotal_price_in_cents}
         title={pageData.cart_title}
+        addItemToStore={addItemToStore}
+        removeItemFromStore={removeItemFromStore}
+        selectedItems={selectedItems}
       />
-      <Subtotal subtotal={pageData.subtotal_price_in_cents} />
+      <Subtotal subtotalFromStore={subtotalFromStore} />
       <div className="stick-bottom">
         <YZButton btnText={"Checkout"} btnClasses={"yz-fs-btn"} />
       </div>

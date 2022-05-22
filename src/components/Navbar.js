@@ -2,8 +2,11 @@ import "../styles/Navbar.scss"
 import cart from "../assets/cart.svg"
 import zelf_text from "../assets/Zelf.svg"
 import zelf_logo from "../assets/logo.svg"
+import useStore from "../store/store"
 
-function Navbar({ itemCount }) {
+function Navbar() {
+  const selectedItems = useStore((state) => state.selectedItems)
+
   return (
     <div className="yz-navbar">
       <a
@@ -16,8 +19,8 @@ function Navbar({ itemCount }) {
       </a>
       <div className="nav-info">
         <div
-          className={`cart ${itemCount ? "non-empty" : ""}`}
-          data-count={itemCount}
+          className={`cart ${selectedItems.length ? "non-empty" : ""}`}
+          data-count={selectedItems.length}
         >
           <img src={cart} alt="Cart"></img>
         </div>

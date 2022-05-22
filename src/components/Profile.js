@@ -1,17 +1,7 @@
 import "../styles/Profile.scss"
 import { numFormatter } from "../utility/Utility"
 
-import { useEffect } from "react"
-
 const Profile = ({ profileInfo }) => {
-  useEffect(() => {
-    console.log(profileInfo)
-  }, [profileInfo])
-
-  if (!profileInfo) return <div>Loading...</div>
-
-  // creator_banner_url, creator_icon_url, creator_name, creator_subscriber_count
-
   return (
     profileInfo && (
       <div className="creator-profile">

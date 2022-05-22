@@ -9,11 +9,11 @@ const useStore = create(
         selectedItems: [...state.selectedItems, value],
         subtotal: state.subtotal + value.sale_price_in_cents,
       })),
-    removeItemFromStore: (id, price) =>
+    removeItemFromStore: (name, price) =>
       set((state) => ({
         subtotal: state.subtotal - price,
         selectedItems: state.selectedItems.filter(
-          (selectedItem) => selectedItem.id !== id
+          (selectedItem) => selectedItem.name !== name
         ),
       })),
   }))

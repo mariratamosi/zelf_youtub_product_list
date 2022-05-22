@@ -1,8 +1,4 @@
-import useStore from "../store/store"
-
-const Subtotal = ({ subtotal }) => {
-  const subtotalFromStore = useStore((state) => state.subtotal)
-
+const Subtotal = ({ subtotalFromStore }) => {
   return (
     <div
       className={`stick-bottom-70 subtotal-parent ${
