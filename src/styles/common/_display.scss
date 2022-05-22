@@ -2,7 +2,7 @@ $border-radius: 5px;
 $padding-side: 15px;
 $margin-top: 15px;
 $nav-height: 50px;
-$body-padding: 20px;
+$body-padding: 15px;
 $large-btn-height: 40px;
 
 @mixin flex-space-between {
@@ -35,7 +35,11 @@ $large-btn-height: 40px;
 }
 
 @mixin for-size($size) {
-  @if $size == phone-only {
+  @if $size == mini-phone-or-zoomed {
+    @media (max-width: 374px) {
+      @content;
+    }
+  } @else if $size == phone-only {
     @media (max-width: 599px) {
       @content;
     }

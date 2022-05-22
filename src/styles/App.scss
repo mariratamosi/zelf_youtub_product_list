@@ -5,10 +5,16 @@
   background: theme.$neutrals-one;
   min-height: 100vh;
   color: white;
-  padding: 0 20px;
+  padding: 0 15px;
   overflow: auto;
   display: flex;
   flex-flow: column;
+}
+
+@include common.for-size(mini-phone-or-zoomed) {
+  .App {
+    padding: 0;
+  }
 }
 
 @include common.for-size(tablet-portrait-up) {
