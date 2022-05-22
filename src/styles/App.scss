@@ -10,3 +10,20 @@
   display: flex;
   flex-flow: column;
 }
+
+@include common.for-size(tablet-portrait-up) {
+  #root {
+    background: theme.$neutrals-one;
+  }
+
+  .App {
+    width: 500px;
+    margin: auto;
+  }
+
+  .full-sticked {
+    width: 500px !important;
+    left: 50% !important;
+    transform: translate(-50%, 0);
+  }
+}

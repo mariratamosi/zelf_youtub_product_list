@@ -38,7 +38,7 @@ function ProductListPage() {
         selectedItems={selectedItems}
       />
       <Subtotal subtotalFromStore={subtotalFromStore} />
-      <div className="stick-bottom">
+      <div className="stick-bottom full-sticked">
         <YZButton btnText={"Checkout"} btnClasses={"yz-fs-btn"} />
       </div>
     </>

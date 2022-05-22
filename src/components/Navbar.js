@@ -8,7 +8,7 @@ function Navbar() {
   const selectedItems = useStore((state) => state.selectedItems)
 
   return (
-    <div className="yz-navbar">
+    <div className="yz-navbar full-sticked">
       <a
         className="company-name-text"
         href="https://hellozelf.com/"
