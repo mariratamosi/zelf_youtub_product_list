@@ -26,8 +26,8 @@
   }
 
   .cart-items {
-    //opacity: 1;
-    transition: all 0.5s ease-in-out;
+    max-height: 10000px;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
   }
 
   .cart-and-title {
@@ -39,7 +39,9 @@
       }
 
       .cart-items {
-        display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
       }
     }
   }

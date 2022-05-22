@@ -15,6 +15,15 @@ const Cart = ({
     setIsCollapsed(!isCollapsed)
   }
 
+  const handleOnKeyPress = (event) => {
+    const keys = ["Enter", "Spacebar", " "]
+    if (keys.includes(event.key)) {
+      handleCollapseOrExpand()
+    }
+  }
+
+  const cart_id = "collapsible-cart"
+
   return (
     <>
       <div
@@ -32,13 +41,21 @@ const Cart = ({
           <div
             className="cart-title-collapsible"
             onClick={handleCollapseOrExpand}
+            aria-expanded={!isCollapsed}
+            role="button"
+            aria-controls={`${cart_id}-content`}
+            onKeyDown={handleOnKeyPress}
+            tabIndex="0"
+            aria-labelledby={`${cart_id}-title`}
           >
             <div className="yz-icon">
               <img src={downvote} alt="Collapse"></img>
             </div>
-            <div className="title">{title}</div>
+            <div className="title" id={`${cart_id}-title`}>
+              {title}
+            </div>
           </div>
-          <div className="cart-items">
+          <div className="cart-items" id={`${cart_id}-content`}>
             {Object.keys(items).map((key, idx) => {
               return (
                 <Product

@@ -1,3 +1,5 @@
+import "../styles/subtotal.scss"
+
 const Subtotal = ({ subtotalFromStore }) => {
   return (
     <div
