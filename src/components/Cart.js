@@ -40,7 +40,6 @@ const Cart = ({
           </div>
           <div className="cart-items">
             {Object.keys(items).map((key, idx) => {
-              items[key].key = key
               return (
                 <Product
                   key={idx}

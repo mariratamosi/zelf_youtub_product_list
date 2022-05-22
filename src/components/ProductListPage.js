@@ -16,6 +16,7 @@ function ProductListPage() {
         setPageData(pageData)
       })
       .catch((err) => {
+        //TODO: add error state
         console.log(err)
       })
   }, [])

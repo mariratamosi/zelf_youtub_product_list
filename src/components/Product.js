@@ -17,7 +17,7 @@ const Product = ({
     if (!isSelected) {
       addItemToStore(item)
     } else {
-      removeItemFromStore(item.id, item.sale_price_in_cents)
+      removeItemFromStore(item.name, item.sale_price_in_cents)
     }
 
     setIsSelected(!isSelected)
