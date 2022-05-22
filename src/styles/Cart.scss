@@ -49,6 +49,7 @@
   .cart-title-collapsible {
     @include common.flex-start;
     margin: common.$margin-top 0;
+    cursor: pointer;
 
     .yz-icon img {
       @include common.yz-icon-img;
