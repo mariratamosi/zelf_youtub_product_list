@@ -11,7 +11,7 @@ function ProductListPage() {
   const [pageData, setPageData] = useState(null)
 
   useEffect(() => {
-    fetchBuildingProducListData("data2.json")
+    fetchBuildingProducListData("data.json")
       .then((pageData) => {
         setPageData(pageData)
       })
